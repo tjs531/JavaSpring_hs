@@ -1,4 +1,4 @@
-package com.koreait.hs.repeat;
+package com.koreait.hs.level2;
 
 public class While2 {
 	public static void main(String[] args) {
