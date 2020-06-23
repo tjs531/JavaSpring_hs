@@ -42,6 +42,5 @@ public class BoardVO {
 
 	public int getWriteId() {
 		return writeId;
-	}
-	
+	}	
 }
