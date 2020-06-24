@@ -10,15 +10,12 @@ public class MyListTest {			//1. 자바 파일과 이름이 같은 클래스가 
 		list.add(20);
 		list.add(1,100);
 		
-		int delVal = list.remove();
-		int delVal2 = list.remove(1);
-				
-		for(int i=0; i<list.size(); i++) {
-			System.out.print(list.get(i)+ ", ");
-		}
+		MyArrays.print(list);			//프린트 되도록
+		
 		System.out.println();
-		System.out.println(delVal);
-		System.out.println(delVal2);
+		String str = MyArrays.toString(list); //"[10,1200,15] 문자열 리턴"
+		System.out.print(str);
+		
 	}
 }
 
@@ -88,5 +85,25 @@ class MyList {
 		
 		return d_num;*/
 		return remove(arr.length-1);
+	}
+}
+
+
+class MyArrays {
+	
+	static void print(MyList list) {
+		System.out.print("[");
+		for(int i=0; i<list.size(); i++) {
+			System.out.printf((i != list.size()-1 ? "%d, " : "%d]"), list.get(i));
+		}
+	}
+	
+	static String toString(MyList list) {
+		String str= "[";
+		for(int i=0; i<list.size(); i++) {
+			str += list.get(i) + ((i != list.size()-1) ? ", " : "]");
+		}
+		 
+		return str;
 	}
 }
