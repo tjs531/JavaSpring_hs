@@ -92,18 +92,22 @@ class MyList {
 class MyArrays {
 	
 	static void print(MyList list) {
-		System.out.print("[");
+		/*System.out.print("[");
 		for(int i=0; i<list.size(); i++) {
 			System.out.printf((i != list.size()-1 ? "%d, " : "%d]"), list.get(i));
-		}
+		}*/
+		System.out.println(toString(list));
 	}
+	
+
 	
 	static String toString(MyList list) {
 		String str= "[";
 		for(int i=0; i<list.size(); i++) {
 			str += list.get(i) + ((i != list.size()-1) ? ", " : "]");
 		}
-		 
 		return str;
+		//return String.format("[%s]", str);		//결과를 스트링으로 리턴해준다.
+		//return "[" + str + "]";
 	}
 }
