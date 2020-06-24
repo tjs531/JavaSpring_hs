@@ -6,16 +6,19 @@ public class MyListTest {			//1. 자바 파일과 이름이 같은 클래스가 
 	public static void main(String[] args) {
 		MyList list = new MyList();
 		list.add(10);
-		list.add(2);
-		list.add(3);
-		list.add(1,1);
+		list.add(15);
+		list.add(20);
+		list.add(1,100);
 		
-		list.remove();
-		list.remove(1);
+		int delVal = list.remove();
+		int delVal2 = list.remove(1);
 				
 		for(int i=0; i<list.size(); i++) {
 			System.out.print(list.get(i)+ ", ");
 		}
+		System.out.println();
+		System.out.println(delVal);
+		System.out.println(delVal2);
 	}
 }
 
@@ -45,7 +48,7 @@ class MyList {
 	
 	void add(int index, int num) {
 		int[] temp = new int[arr.length+1];
-		
+		/*
 		for(int i=0; i<index ; i++) {
 			temp[i] = arr[i];
 		}
@@ -54,24 +57,37 @@ class MyList {
 		
 		for(int i=index; i<arr.length; i++) {
 			temp[i+1] = arr[i];
+		}*/
+		
+		for(int i=0; i<arr.length;i++) {
+			temp[i<index? i : i+1] = arr[i];
 		}
-
+		temp[index] = num;
+		
 		arr = temp;
+		
 	}
 	
-	void remove(int index) {
+	int remove(int index) {
 		int[] temp = new int[arr.length-1];
+		int d_num = arr[index];
 		for(int i=0; i<temp.length; i++) {
 			temp[i] = (i<index) ? arr[i] : arr[i+1];
 		}
 		arr = temp;
+		
+		return d_num;
 	}
 	
-	void remove() {
-		int[] temp = new int[arr.length-1];
+	int remove() {
+		/*int[] temp = new int[arr.length-1];
+		int d_num = arr[arr.length-1];
 		for(int i=0; i<temp.length; i++) {
 			temp[i] = arr[i];
 		}
 		arr = temp;
+		
+		return d_num;*/
+		return remove(arr.length-1);
 	}
 }
