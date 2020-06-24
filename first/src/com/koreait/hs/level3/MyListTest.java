@@ -38,12 +38,13 @@ class MyList {
 	}
 	
 	void add(int num) {
-		int[] temp = new int[arr.length+1];
+		/*int[] temp = new int[arr.length+1];
 		for(int i=0; i<arr.length; i++) {
 			temp[i] = arr[i];
 		}
 		temp[arr.length]=num;
-		arr = temp;
+		arr = temp;*/
+		add(arr.length, num);						//만들어놓은 메소드 활용하깅
 	}
 	
 	void add(int index, int num) {
@@ -60,12 +61,10 @@ class MyList {
 		}*/
 		
 		for(int i=0; i<arr.length;i++) {
-			temp[i<index? i : i+1] = arr[i];
+			temp[(i<index)? i : i+1] = arr[i];			//삼항연산자 사용...!!!!
 		}
 		temp[index] = num;
-		
 		arr = temp;
-		
 	}
 	
 	int remove(int index) {
