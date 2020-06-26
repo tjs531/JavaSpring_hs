@@ -1,7 +1,6 @@
 package com.koreait.hs.baseball;
 
 public class Checker {
-
 	//S:0 / B:0 / O:0
 	//성공하면(S:3이면) false,  성공전이면 true
 	public static boolean check(int len, Baseball base, MyBall m_base) {
@@ -21,9 +20,6 @@ public class Checker {
 		
 		System.out.printf("S: %d / B: %d / O: %d\n", s,b,len-s-b);
 		
-		if(s==3) {
-			return false;
-		}
-		return true;
+		return s != len;
 	}
 }

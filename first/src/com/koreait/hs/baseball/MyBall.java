@@ -20,10 +20,6 @@ public class MyBall {
 			try {
 				myArr[i] = Integer.parseInt(val);	//입력받은 문자를 숫자로 파싱
 			}catch(Exception e){					//문자를 입력해서 에러날 시 0을 입력
-				myArr[i] = 0;		//입력 안해주면 1,1,ㅁㄴㅇㄹ 입력할시 에러(두번째 자리에 이미 값이 들어가 있어서.)
-			}
-			
-			if(myArr[i] == 0) {
 				i--;
 				System.out.println("숫자만 입력해라");
 				continue;
