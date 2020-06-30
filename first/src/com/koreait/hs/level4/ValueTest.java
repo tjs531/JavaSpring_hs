@@ -12,6 +12,6 @@ public class ValueTest {
 		Value val2 = new Value(1);
 		
 		System.out.println("3: " + (val1 == val2));
-		System.out.println("4: "+ val1.equals(val2));		//equals는 기본적으로 주소값 비교
+		System.out.println("4: "+ val1.equals(val2));		//Object에 있는 원래 equals 메소드는 주소값 비교하는 메소드
 	}
 }
