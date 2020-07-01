@@ -1,6 +1,6 @@
 package com.koreait.hs.level7;
 
-public class Marine extends Unit implements AttackUnit{		//인터페이스 여러개 상속 가능. (,로 구분)
+public class Marine extends Unit implements AttackUnit, Carable{		//인터페이스 여러개 상속 가능. (,로 구분)
 
 	private int damage;
 	
