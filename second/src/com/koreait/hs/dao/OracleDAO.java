@@ -1,4 +1,4 @@
-package com.koreait.he.dao;
+package com.koreait.hs.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
